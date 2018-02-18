@@ -55,8 +55,7 @@ export default {
 }
 </script>
 
-<!-- Added "scoped" attribute to limit CSS to this component only -->
-<!-- global styles in App.vue -->
+<!-- Added "scoped" attribute to limit CSS to this component only - global styles in App.vue -->
 <style scoped>
 h1, h2 {
   font-weight: normal;
