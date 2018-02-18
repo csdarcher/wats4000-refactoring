@@ -6,12 +6,15 @@
       <router-link v-bind:to="{ name: 'Forecast', params: { cityId: $route.params.cityId } }">View 5-Day Forecast</router-link>
     </p>
     <div v-if="weatherData && errors.length===0">
+      <!-- WeatherSummary child component - icons and labels -->
       <weather-summary v-bind:weatherData="weatherData.weather"></weather-summary>
+      <!-- WeatherData child component - weather condition del list -->
       <weather-data v-bind:weatherData="weatherData.main"></weather-data>    
     </div>
     <div v-else>
       <h2>Loading...</h2>
     </div>
+    <!-- Error list child component -->
     <error-list v-bind:errorList="errors"></error-list>
   </div>
 </template>
@@ -53,6 +56,7 @@ export default {
 </script>
 
 <!-- Added "scoped" attribute to limit CSS to this component only -->
+<!-- global styles in App.vue -->
 <style scoped>
 h1, h2 {
   font-weight: normal;

@@ -8,10 +8,13 @@
         <li v-for="city in results.list">
             <h2>{{ city.name }}, {{ city.sys.country }}</h2>
             <p><router-link v-bind:to="{ name: 'CurrentWeather', params: { cityId: city.id } }">View Current Weather</router-link></p>
+            <!-- WeatherSummary child component - icons and labels -->
             <weather-summary v-bind:weatherData="city.weather"></weather-summary>
+            <!-- WeatherData child component - weather condition del list -->
             <weather-data v-bind:weatherData="city.main"></weather-data>
         </li>
     </ul>
+    <!-- Error list child component -->
     <error-list v-bind:errorList="errors"></error-list>
 
   </div>
@@ -54,9 +57,10 @@ export default {
     'error-list': ErrorList
   }
 }
-</script>
 
+</script>
 <!-- Added "scoped" attribute to limit CSS to this component only -->
+<!-- global styles in App.vue -->
 <style scoped>
 
 h1, h2 {

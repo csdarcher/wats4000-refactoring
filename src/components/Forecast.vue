@@ -8,13 +8,16 @@
     <ul v-if="weatherData && errors.length===0" class="forecast">
       <li v-for="forecast in weatherData.list">
         <h3>{{ forecast.dt|formatDate }}</h3>
+        <!-- WeatherSummary child component - icons and labels -->
         <weather-summary v-bind:weatherData="forecast.weather"></weather-summary>
+        <!-- WeatherData child component - weather condition del list -->
         <weather-data v-bind:weatherData="forecast.main"></weather-data>
       </li>
     </ul>
     <div v-else>
       <h2>Loading...</h2>
     </div>
+    <!-- Error list child component -->
     <error-list v-bind:errorList="errors"></error-list>
   </div>
 </template>
@@ -80,6 +83,7 @@ export default {
 </script>
 
 <!-- Added "scoped" attribute to limit CSS to this component only -->
+<!-- global styles in App.vue -->
 <style scoped>
 h1, h2 {
   font-weight: normal;

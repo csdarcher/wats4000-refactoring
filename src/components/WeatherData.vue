@@ -25,9 +25,9 @@ export default {
     }
 }
 </script>
-
+<!-- Added "scoped" attribute to limit CSS to this component only -->
+<!-- global styles in App.vue -->
 <style scoped>
-
 dl {
   padding: 5px;
   background: #e8e8e8;
