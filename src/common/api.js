@@ -1,4 +1,5 @@
 // Base API Configuration
+// All calls to Axios should run through this module
 
 import axios from 'axios';
 

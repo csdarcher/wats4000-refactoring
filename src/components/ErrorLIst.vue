@@ -18,13 +18,12 @@ export default {
     }
   },
   props: {
-    errorList: {}
+    errorList: null
   }
 }
 </script>
 
-<!-- Added "scoped" attribute to limit CSS to this component only -->
-<!-- global styles in App.vue -->
+<!-- Added "scoped" attribute to limit CSS to this component only - global styles in App.vue -->
 <style scoped>
   .errors li {
     color: red;

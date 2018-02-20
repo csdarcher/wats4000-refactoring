@@ -48,7 +48,7 @@ export default {
       this.weatherData = response.data
     })
     .catch(error => {
-      this.errors.push(error)
+      this.errors.push(error.message)
     });
   },
   filters: {
